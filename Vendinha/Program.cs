@@ -13,7 +13,7 @@ var context = new VendinhaDbContext();
 
 Console.WriteLine("Digite o Nome Completo:");
 var nome = Console.ReadLine();
-var cliente = new Cliente { NomeCompleto = nome };
+var cliente = new Cliente { nome_completo = nome };
 
 Console.WriteLine("Digite o seu CPF:");
 var CPF = Console.ReadLine();
