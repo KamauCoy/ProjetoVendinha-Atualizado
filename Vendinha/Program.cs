@@ -16,13 +16,13 @@ var nome = Console.ReadLine();
 var cliente = new Cliente { nome_completo = nome };
 
 Console.WriteLine("Digite o seu CPF:");
-var CPF = Console.ReadLine();
+var cpf = Console.ReadLine();
 
 Console.WriteLine("Digite a Data de Nascimento:");
-var DataNascimento = DateTime.Parse(Console.ReadLine());
+var data_nascimento = DateTime.Parse(Console.ReadLine());
 
 Console.WriteLine("Digite o seu Email:");
-var Email = Console.ReadLine();
+var email = Console.ReadLine();
 
 
 
