@@ -38,7 +38,7 @@ namespace Vendinha.Services
 
             var possuiDividaAberta = context.Dividas.Any(d =>
                 d.ClienteId == divida.ClienteId &&
-                !d.Paga);
+                !d.paga);
 
             if (possuiDividaAberta)
             {
@@ -51,7 +51,7 @@ namespace Vendinha.Services
             }
 
             divida.data_criacao = DateTime.Now;
-            divida.Paga = false;
+            divida.paga = false;
 
             context.Dividas.Add(divida);
             context.SaveChanges();
@@ -81,7 +81,7 @@ namespace Vendinha.Services
             if (divida == null)
                 return false;
 
-            divida.Valor = dividaAtualizada.Valor;
+            divida.Valor = dividaAtualizada.valor;
 
             context.SaveChanges();
 
@@ -111,7 +111,7 @@ namespace Vendinha.Services
             if (divida == null)
                 return false;
 
-            divida.Paga = true;
+            divida.paga = true;
             divida.data_pagamento = DateTime.Now;
 
             context.SaveChanges();
